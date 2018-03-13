@@ -163,11 +163,12 @@ class Measurement
   end
 
   define(:count) do |unit|
+    unit.alias :'ct', :'pc', :'pc', :'each', :'ea'
     unit.convert_to(:dozen) { |value| value / 12.0 }
   end
 
   define(:doz) do |unit|
-    unit.alias :dozen
+    unit.alias :dozen, :'dz', :'dzn'
     unit.convert_to(:count) { |value| value * 12.0 }
   end
 end

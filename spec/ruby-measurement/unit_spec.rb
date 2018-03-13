@@ -150,7 +150,7 @@ RSpec.describe Measurement::Unit do
         unit = subject[:dozen]
         expect(unit).to be_a described_class
         expect(unit.name).to eq 'doz'
-        expect(unit.aliases).to eq %w(doz dozen).to_set
+        expect(unit.aliases).to eq %w(doz dozen dz dzn).to_set
       end
     end
 

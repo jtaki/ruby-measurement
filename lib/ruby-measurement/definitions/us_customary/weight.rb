@@ -19,7 +19,7 @@ Measurement.define(:cwt) do |unit|
 end
 
 Measurement.define(:lb) do |unit|
-  unit.alias :lbs, :pound, :pounds
+  unit.alias :lbs, :pound, :pounds, "#"
   unit.convert_to(:ton) { |value| value / 2000.0 }
   unit.convert_to(:cwt) { |value| value / 100.0 }
   unit.convert_to(:oz) { |value| value * 16.0 }
@@ -46,7 +46,7 @@ Measurement.define(:dr) do |unit|
 end
 
 Measurement.define(:gr) do |unit|
-  unit.alias :grain, :grains
+  unit.alias :grain, :grains, :gm
   unit.convert_to(:ton) { |value| value / 14_000_000.0 }
   unit.convert_to(:cwt) { |value| value / 700_000.0 }
   unit.convert_to(:lb) { |value| value / 7000.0 }

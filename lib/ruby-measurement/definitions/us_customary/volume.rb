@@ -1,7 +1,7 @@
 # encoding: UTF-8
 
 Measurement.define(:'gal.') do |unit|
-  unit.alias :gal, :gallon, :gallons
+  unit.alias :gal, :gallon, :gallons, :ga
   unit.convert_to(:qt) { |value| value * 4.0 }
   unit.convert_to(:pt) { |value| value * 8.0 }
   unit.convert_to(:c) { |value| value * 16.0 }
